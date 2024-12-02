@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Navigation Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, rgb(2, 211, 211), rgb(251, 56, 199));
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            margin-bottom: 150px;
+            font-size: 4rem;
+            font-weight: bolder;
+            color: rgba(250, 247, 250, 0.603);
+            animation: light 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes light {
+            from {
+                text-shadow: 6px 6px 12px rgba(12, 171, 36, 0.5);
+            }
+
+            to {
+                text-shadow: 6px 6px 12px rgba(255, 3, 24, 0.5);
+            }
+        }
+
+        button {
+            margin: 50px;
+            padding: 150px 120px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .btn-primary {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-tertiary {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.6);
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.7);
+        }
+
+        /* 页面跳转时的淡出动画 */
+        .fade-out {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 1s, transform 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the MUSIC VIS LAB</h1>
+    <div class="links">
+        <button class="btn btn-primary" id="button1">Go to Page 1</button>
+        <button class="btn btn-secondary" id="button2">Go to Page 2</button>
+        <button class="btn btn-tertiary" id="button3">Go to Page 3</button>
+    </div>
+
+    <script>
+        function navigateTo(url) {
+            // 先添加淡出效果
+            // document.body.classList.add('fade-out');
+            window.location.href = url;
+            // 等待动画完成后进行页面跳转
+        }
+
+        document.getElementById('button1').addEventListener('click', () => {
+            navigateTo('ratio.html'); // 替换为目标页面的 URL
+        });
+
+        document.getElementById('button2').addEventListener('click', () => {
+            navigateTo('ball.html'); // 替换为目标页面的 URL
+        });
+
+        document.getElementById('button3').addEventListener('click', () => {
+            navigateTo('wave.html'); // 替换为目标页面的 URL
+        });
+    </script>
+</body>
+
+</html>

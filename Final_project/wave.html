@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="./wave_STY/styles.css" />
+  <script type="module" src="./wave_JS/script.js" defer></script>
+  <title>3D Music Visualizer</title>
+  <meta name="description"
+    content="A 3d music Visualizer using Three.js and custom shaders." />
+  <link rel="shortcut icon" href="./wave_PIC/play.svg" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <audio id="audio" src="./music/winter-short.mp3" className="audio" controls></audio>
+  <canvas id="canvas"></canvas>
+  <h1 id="welcome">Welcome to the last part, MY FRIEND!</h1>
+  <h2 id="line1">In this section, our group used subdivision surfaces to create a network grid that resembles ripples.</h2>
+  <h2 id="line2">This mesh will pulsate with the music, expanding outward from a central point.</h2>
+  <h2 id="line3">Hope you like this</h2>
+  <button class="startBtn">Start</button>
+  <div class="controls">
+    <button class="playBtn">
+      <img src="./wave_PIC/play.svg" alt="Pause" />
+      <p>Play</p>
+    </button>
+    <button class="uploadBtn">
+      <img src="./wave_PIC/upload.svg" alt="Upload" />
+      <p>Upload Music</p>
+    </button>
+    <input type="file" accept="audio/*" name="fileUpload" id="fileUpload" />
+  </div>
+</body>
+
+</html>

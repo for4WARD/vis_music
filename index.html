@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=0" />
+  <title>音乐可视化</title>
+  <link rel="stylesheet" href="player_assets/font/iconfont.css">
+  <link rel="stylesheet" href="stylesheet/player/style.css">
+  <link rel="preload" href="./assets/audio/沙锤.mp3" as="audio" />
+  <link rel="preload" href="./assets/audio/脚鼓.mp3" as="audio" />
+  <link rel="preload" href="./assets/audio/饶钹.mp3" as="audio" />
+  <link rel="preload" href="./assets/audio/踏钹.mp3" as="audio" />
+  <link rel="preload" href="./assets/audio/军鼓.mp3" as="audio" />
+  <link rel="preload" href="./assets/audio/掌声.mp3" as="audio" />
+  <link rel="preload" href="./assets/audio/bgmusic.mp3" as="audio" />
+  <link rel="stylesheet" type="text/css" href="./stylesheet/hit/background.css" />
+  <link rel="stylesheet" type="text/css" href="./stylesheet/hit/index.css" />
+  <script src="./JS/hit/snap.svg-min.js"></script>
+</head>
+
+<body class="demo-2">
+  <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <path class="shape-overlays__path"></path>
+    <path class="shape-overlays__path"></path>
+    <path class="shape-overlays__path"></path>
+    <path class="shape-overlays__path"></path>
+  </svg>
+  <div class="keypad">
+    <div class="row">
+      <div class="col" id="rect11">
+        <img src="./assets/icons/audio_icon11.svg" />
+      </div>
+      <div class="col" id="rect12">
+        <img src="./assets/icons/audio_icon12.svg" />
+      </div>
+      <div class="col" id="rect13">
+        <img src="./assets/icons/audio_icon13.svg" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" id="rect21">
+        <img src="./assets/icons/audio_icon21.svg" />
+      </div>
+      <div class="col" id="rect22">
+        <img src="./assets/icons/audio_icon22.svg" />
+      </div>
+      <div class="col" id="rect23">
+        <img src="./assets/icons/audio_icon23.svg" />
+      </div>
+    </div>
+  </div>
+
+  <div id="player">
+    <!-- 歌曲信息模块 -->
+    <div id="player-content1">
+      <!-- 歌曲名 -->
+      <div class="music-name"></div>
+      <!-- 歌手名 -->
+      <div class="artist-name"></div>
+      <!-- 歌曲时间 -->
+      <div class="time">
+        <!-- 当前播放的时间 -->
+        <div class="current-time"></div>
+        <!-- 歌曲总时长 -->
+        <div class="total-time"></div>
+      </div>
+      <!-- 进度条 -->
+      <div id="s-area">
+        <!-- 鼠标移动到进度条上，显示的时间信息 -->
+        <div id="ins-time"></div>
+        <!-- 鼠标移动到进度条上，进度条变暗部分-->
+        <div id="s-hover"></div>
+        <!-- 表示当前歌曲播放进度的蓝色进度条 -->
+        <div id="seek-bar"></div>
+      </div>
+    </div>
+
+    <!-- 控制模块 -->
+    <div id="player-content2">
+      <!-- 左侧歌曲封面旋转模块 -->
+      <div class="music-imgs">
+        <!-- 封面图 -->
+        <div class="img"></div>
+        <!-- 歌曲缓冲时的提示文字 -->
+        <div id="buffer-box">缓冲…</div>
+      </div>
+      <!-- 右侧歌曲操作模块 -->
+      <div class="player-controls">
+        <!-- 上一首按钮 -->
+        <div class="btn prev iconfont">&#xe603;</div>
+        <!-- 暂停/播放 按钮 -->
+        <div class="btn play-pause icon-jiediankaishi iconfont"></div>
+        <!-- 下一首按钮 -->
+        <div class="btn next iconfont">&#xe602;</div>
+      </div>
+    </div>
+
+
+    <script src="JS/player/jquery-3.4.1.min.js"></script>
+    <script src="JS/player/index.js"></script>
+    <script src="./JS/hit/animations.js"></script>
+    <script src="./JS/hit/background.js"></script>
+    <script src="./JS/hit/index.js"></script>
+</body>
+
+</html>

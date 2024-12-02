@@ -1,0 +1,105 @@
+/* 全局样式 */
+html, body {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f0f8ff, #e6f7ff); /* 背景渐变 */
+  z-index: 0;
+}
+
+/* 按键区 */
+.keypad {
+  display: inline-flex;
+  flex-direction: column;
+  position: absolute;
+  right: 40px; /* 增加右侧间距 */
+  top: 40px; /* 增加上方间距 */
+  z-index: 100;
+  padding: 24px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  border-radius: 20px; /* 圆角 */
+  background: #ffffff; /* 白色背景 */
+  overflow: hidden; /* 隐藏溢出内容 */
+}
+.row {
+  display: flex;
+  justify-content: space-between; /* 按钮之间均匀分布 */
+  padding: 10px 0; /* 内部间距 */
+}
+.col {
+  width: 100px;
+  height: 100px;
+  margin: 0 10px; /* 按钮之间的间距 */
+  border-radius: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s; /* 平滑过渡效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 按钮阴影 */
+}
+.col:hover {
+  transform: scale(1.1); /* 鼠标悬停时放大 */
+}
+.col > img {
+  width: 80px;
+}
+#rect11, #rect12, #rect13, #rect21, #rect22, #rect23 {
+  background: linear-gradient(135deg, #0c7b93, #00a8cc); /* 统一渐变背景 */
+}
+
+/* 控制区域 */
+.control_area {
+  display: inline-flex;
+  flex-direction: column;
+  position: absolute;
+  right: 40px; /* 增加右侧间距 */
+  bottom: 40px; /* 增加底部间距 */
+  z-index: 100;
+  background: #ffffff; /* 白色背景 */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  border-radius: 20px; /* 圆角 */
+  padding: 20px; /* 内部间距 */
+}
+.drink_about {
+  display: inline-block;
+  width: 400px;
+  height: 80px;
+  background: linear-gradient(135deg, #ffefe5, #ffebd1); /* 渐变背景 */
+  border-radius: 40px;
+  text-align: center;
+  line-height: 80px;
+  font-size: 36px;
+  color: #000;
+  font-weight: bold; /* 加粗字体 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+.status_bar {
+  display: inline-block;
+  width: 400px;
+  height: 80px;
+  background: linear-gradient(135deg, #f9f7e8, #fff8e1); /* 渐变背景 */
+  border-radius: 40px;
+  margin: 40px 0;
+  color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+}
+.status_bar > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.status_bar > img {
+  width: 40px;
+  margin-right: 10px; /* 图标与文本之间的间距 */
+}
+
+/* 动画类 */
+.animation {
+  position: absolute;
+  z-index: 10;
+  transition: all 0.3s ease; /* 平滑过渡效果 */
+}

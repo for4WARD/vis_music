@@ -47,16 +47,23 @@ canvas:hover {
         -10px -10px 20px rgba(235, 239, 240, 0.5);
 }
 
-nav {
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
-}
-
 #brand-name {
     font-size: 60px;
     font-weight: 400;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fefefe;
+    text-shadow: 0px 1px 0px #c0c0c0,
+        0px 2px 0px #b0b0b0,
+        0px 3px 0px #a0a0a0,
+        0px 4px 0px #909090,
+        0px 5px 10px rgba(0, 0, 0, .9);
+    margin-bottom: 50px;
+}
+
+.text {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #fefefe;
     text-shadow: 0px 1px 0px #c0c0c0,
         0px 2px 0px #b0b0b0,
@@ -65,15 +72,47 @@ nav {
         0px 5px 10px rgba(0, 0, 0, .9);
 }
 
-.text {
-    font-size: 120%;
-    font-weight: 400;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+#Press {
+    margin-bottom: 150px;
 }
 
-#start-app {
-    
+.button {
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.402);
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 300;
+    transition: all 0.5s ease;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 0px 1px 0px #c0c0c0,
+        0px 2px 0px #b0b0b0,
+        0px 3px 0px #a0a0a0,
+        0px 4px 0px #909090,
+        0px 5px 10px rgba(0, 0, 0, .9);
+
 }
+
+.button:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+.button:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
 
 #main-frame {
     padding: 0;
@@ -91,7 +130,11 @@ main {
 #play-button {
     border: none;
     background-color: transparent;
-    color: white;
+    /* color: white; */
+    /* size: 20px; */
+    /* 
+    height: 20px; */
+    /* height: 50px; */
     border-radius: 50%;
     user-select: none;
     /* margin-top: 3%; */
@@ -114,8 +157,12 @@ main {
 
 #ui select,
 #ui input {
-    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(215, 215, 215, 0.543);
+    backdrop-filter: blur(30px);
     color: white;
+    border-radius: 10px;
+    border: rgba(0,0,0,0);
 }
 
 #ui select::after,
@@ -151,6 +198,12 @@ main {
 
 }
 
+#file-input {
+    border: rgba(0, 0, 0, 0);
+    
+}
+
 .d-none input[type="file"] {
     display: none;
 }
+

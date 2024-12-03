@@ -40,7 +40,7 @@ var vizInit = function () {
         renderer.setSize(window.innerWidth, window.innerHeight);
 
         // 创建平面几何体
-        var planeGeometry = new THREE.PlaneGeometry(900, 900, 15, 15);
+        var planeGeometry = new THREE.PlaneGeometry(900, 900, 40, 40);
         // 创建平面材质，使用 MeshPhongMaterial
         var planeMaterial = new THREE.MeshPhongMaterial({
             color: 0xFFFFFF,

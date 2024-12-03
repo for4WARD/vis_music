@@ -11,6 +11,10 @@
 
 <body>
   <div id="content">
+    <h1 id="text_a">Here we come to the UNIVERSE.</h1>
+    <h2 id="text_b">In this lab, we construct a liquid 3D sphere that moves in sync with the rhythm of the music.</h2>
+    <h2 id="text_c">Press the button below to upload music.</h2>
+    <h2 id="text_d">Hope you have fun.</h2> 
 
     <label for="thefile" class="file"> Choose an audio file
       <input type="file" id="thefile" accept="audio/*" />
@@ -18,6 +22,21 @@
     <div id="out"></div>
   </div>
   <!-- partial -->
+  <script> document.getElementById('thefile').addEventListener('change', () => {
+    const elementa = document.getElementById('text_a'); // 选择要隐藏的特定元素
+    elementa.classList.add('hidden'); // 添加 hidden 类，隐藏元素
+
+    const elementb = document.getElementById('text_b'); // 选择要隐藏的特定元素
+    elementb.classList.add('hidden'); // 添加 hidden 类，隐藏元素
+
+    const elementc = document.getElementById('text_c'); // 选择要隐藏的特定元素
+    elementc.classList.add('hidden'); // 添加 hidden 类，隐藏元素
+
+    const elementd = document.getElementById('text_d'); // 选择要隐藏的特定元素
+    elementd.classList.add('hidden'); // 添加 hidden 类，隐藏元素
+   }) 
+  </script>
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js'></script>
   <script src='https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.3/dat.gui.min.js'></script>

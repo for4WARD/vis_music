@@ -1,15 +1,19 @@
-:root{
-  --bgColor : hsla(242, 86%, 6%, 1);
-  --bgColorLight : hsla(242, 86%, 24%, 1);
-  --textColor : hsla(242, 86%, 88%, 1);
-  --textColorDark : hsla(242, 36%, 0%, 1);
+:root {
+  --bgColor: hsla(242, 86%, 6%, 1);
+  --bgColorLight: hsla(242, 86%, 24%, 1);
+  --textColor: hsla(242, 86%, 88%, 1);
+  --textColorDark: hsla(242, 36%, 0%, 1);
   --paperColor: hsla(242, 86%, 44%, 1);
   --paperColorDark: hsla(242, 86%, 34%, 1);
   --shadowColorFaint: hsla(0, 0%, 0%, 0.2);
 }
 
-::selected{
+::selected {
   color: var(--textColorDark);
+}
+
+.hidden {
+  display: none;
 }
 
 body {
@@ -24,27 +28,16 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-  background: linear-gradient(135deg, rgb(2, 211, 211), rgb(251, 56, 199));
-  background-size: 400% 400%;
-  animation: gradientAnimation 10s ease infinite;
+  background-image: url('../texture/stary.jpg');
+  background-size: cover;
+  /* 图片覆盖整个容器 */
+  background-position: center;
+  /* 居中显示 */
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-*{
-  box-sizing: border-box;
-  transition: all 0.12s cubic-bezier(0.42, 0.54, 0.22, 1.26);
-}
+/* #content {
+  margin-top: -250px;
+} */
 
 #canvas {
   position: fixed;
@@ -54,48 +47,89 @@ body {
   height: 100%;
 }
 
-#thefile{
-  width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: 1;
+#text_a {
+  font-family: Verdana, Geneva, sans-serif;
+  color: #666;
+  text-shadow: -1px -1px #000, -2px -2px #333, 1px 1px #fff, 2px 2px #eee;
+  font-size: 60px;
+  margin-bottom: 50px;
+  margin-top: -160px;
 }
 
-label.file{
+
+#text_b {
+  /* margin-top: px; */
+  text-align: center;
+  text-shadow:-1px -1px #fff,1px 1px #333;
+  color:#747373;
+}
+
+
+#text_c {
+  text-align: center;
+  text-shadow:-1px -1px #fff,1px 1px #333;
+  color:#747373;
+}
+
+
+#text_d {
+  text-align: center;
+  text-shadow:-1px -1px #fff,1px 1px #333;
+  color:#30abf7;
+  margin-bottom: 100px;
+}
+
+#thefile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+
+label.file {
   display: inline-block;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  padding: 1rem 2rem;
-  border-radius: 4px;
-  
-  background: var(--paperColor);
-  color: var(--textColor);
-  font-size: 1.25em;
-  font-weight: 700;
-  box-shadow: 0 20px 60px var(--shadowColorFaint);
-
+  text-align: center;
+  left: 42%;
+  top: 60%;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
   cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
 }
 
-
-label.file:hover{
-    background: var(--paperColorDark);
-    transform: translate3d(-50%, -55%, 0);
+label.file:hover {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff;
 }
 
-label.file:active{
-    background: var(--paperColorDark);
-    transform: translate3d(-50%, -45%, 0);
+label.file:focus {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff;
 }
 
-label.file.normal{
-  transform: translate3d(10%, 50%, 0);
+label.file.normal {
   padding: 0.2rem 2rem;
   font-size: 1rem;
-  top: 0;
-  left: 0;
+  top: 2%;
+  left: 2%;
 }

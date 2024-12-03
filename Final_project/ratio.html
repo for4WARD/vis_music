@@ -9,15 +9,15 @@
 </head>
 
 <body>
-    <nav><a href="#" id="brand-name">This is the FIRST Lab.</a></nav>
+    <h1 id="brand-name">This is the FIRST Lab.</h1>
 
     <div class="pl-4 pr-4">
         <div class="container-fluid" id="main-frame">
-            <div class="row p-4">
+            <div class="row">
                 <div id="player" class="mb-5 mx-auto">
                     <div id="control" class="d-none">
                         <main></main>
-                        <button id="play-button">▷</button>
+                        <button id="play-button">🙈</button>
                         <input type="range" id="progress" value="0">
                     </div>
                 </div>
@@ -48,11 +48,11 @@
                     <div class="number-input">
                         <div>
                             <span>Distance inbetween: </span>
-                            <input type="number" class="d-block" id="distance-input" min="50" max="500" value="100">
+                            <input type="number" class="d-block" id="distance-input" min="50" max="500" value="100" style="width: 70px; height:30px">
                         </div>
                         <div>
                             <span>Count: </span>
-                            <input type="number" class="d-block" id="history-input" min="1" max="50" value="10">
+                            <input type="number" class="d-block" id="history-input" min="1" max="50" value="10" style="width: 70px; height:30px">
                         </div>
                     </div>
 
@@ -64,12 +64,9 @@
                 </div>
 
                 <div id="start-audio">
-                    <span class="text">Welcome to our <span class="text-danger">3D</span> music
-                        visualizer.</span>
-                    <span style="font-size: 5rem;" class="speaker">🔊</span>
-                    <span class="text">In this sec, we provide you a console to see what's your music 'likes'.</span>
-                    <span class="text">Press the start button to enable audiouse!</span>
-                    <button class="btn" id="start-app">Start</button>
+                    <h2 class="text">In this sec, we provide you a console to see what's your music 'likes'.</h2>
+                    <h2 class="text" id="Press">Press the start button to enable audiouse!</h2>
+                    <button class="button" id="start-app">Start</button>
                 </div>
                 
             </div>

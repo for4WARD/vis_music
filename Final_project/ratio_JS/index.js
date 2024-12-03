@@ -50,10 +50,10 @@ function initApp() {
         const currentlyPlaying = normalizer.togglePlay();
         if (currentlyPlaying) {
             audio.play(); // 用户点击后开始播放
-            e.target.innerText = '||';
+            e.target.innerText = '🙉';
         } else {
             audio.pause(); // 用户点击后暂停
-            e.target.innerText = '▶';
+            e.target.innerText = '🙈';
         }
     };
 

@@ -59,9 +59,17 @@
             }
         }
 
+        .links {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* 增加按钮之间的间距 */
+        }
+
         button {
-            margin: 50px;
-            padding: 150px 120px;
+            margin: 20px;
+            padding: 20px 40px;
             font-size: 1.2rem;
             border: none;
             border-radius: 50px;
@@ -73,19 +81,21 @@
         .btn-primary {
             background-color: rgba(255, 255, 255, 0.1);
             color: white;
-            /* box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.5); */
         }
 
         .btn-secondary {
             background-color: rgba(255, 255, 255, 0.2);
             color: white;
-            /* box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.5); */
         }
 
         .btn-tertiary {
             background-color: rgba(255, 255, 255, 0.3);
             color: white;
-            /* box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.6); */
+        }
+
+        .btn-fourth {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
         }
 
         button:hover {
@@ -109,26 +119,28 @@
         <button class="btn btn-primary" id="button1">Go to Page 1</button>
         <button class="btn btn-secondary" id="button2">Go to Page 2</button>
         <button class="btn btn-tertiary" id="button3">Go to Page 3</button>
+        <button class="btn btn-fourth" id="button4">Go to Page 4</button>
     </div>
 
     <script>
         function navigateTo(url) {
-            // 先添加淡出效果
-            // document.body.classList.add('fade-out');
             window.location.href = url;
-            // 等待动画完成后进行页面跳转
         }
 
         document.getElementById('button1').addEventListener('click', () => {
-            navigateTo('ratio.html'); // 替换为目标页面的 URL
+            navigateTo('ratio.html');
         });
 
         document.getElementById('button2').addEventListener('click', () => {
-            navigateTo('ball.html'); // 替换为目标页面的 URL
+            navigateTo('ball.html');
         });
 
         document.getElementById('button3').addEventListener('click', () => {
-            navigateTo('wave.html'); // 替换为目标页面的 URL
+            navigateTo('wave.html');
+        });
+
+        document.getElementById('button4').addEventListener('click', () => {
+            navigateTo('./play/play.html');
         });
     </script>
 </body>

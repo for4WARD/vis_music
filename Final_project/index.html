@@ -68,89 +68,70 @@
         }
 
         button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
             margin: 20px;
-            padding: 100px 70px;
+            padding: 20px;
             font-size: 1.2rem;
             border: none;
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.5s ease;
             position: relative;
+            height: 250px;
+            width: 200px;
+            background-color: rgba(255, 255, 255, 0);
+            color:aliceblue;
         }
 
-        .btn-primary {
-            background-color: rgba(255, 255, 255, 0);
-            /* color: white; */
+        button::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 70%;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50px 50px 0 0;
+        }
+
+        .btn-primary::before {
             background-image: url('./texture/lyt1.png');
-            background-size: cover; /* 图片覆盖整个容器 */
-            background-position: 50% 15%; /* 水平居中，垂直位置在容器的25% */
         }
 
-        .btn-secondary {
-            background-color: rgba(255, 255, 255, 0);
-            /* color: white; */
+        .btn-secondary::before {
             background-image: url('./texture/lyx1.png');
-            background-size: cover; /* 图片覆盖整个容器 */
-            background-position: center; /* 居中显示 */
-            background-position: 50% 5%; /* 水平居中，垂直位置在容器的25% */
         }
 
-        .btn-tertiary {
-            background-color: rgba(255, 255, 255, 0);
-            /* color: white; */
+        .btn-tertiary::before {
             background-image: url('./texture/zjx1.png');
-            background-size: cover; /* 图片覆盖整个容器 */
-            background-position: center; /* 居中显示 */
         }
 
-        .btn-fourth {
-            background-color: rgba(255, 255, 255, 0);
-            /* color: white; */
+        .btn-fourth::before {
             background-image: url('./texture/zly2.png');
-            background-size: cover; /* 图片覆盖整个容器 */
-            background-position: 50% 0%; /* 水平居中，垂直位置在容器的25% */
         }
 
-        .btn-primary:hover {
-            transform: scale(1.05);
-            /* box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.7); */
-            background-color: rgba(255, 255, 255, 0);
-            /* color: white; */
+        .btn-primary:hover::before {
             background-image: url('./texture/lyt2.png');
-            background-size: cover; /* 图片覆盖整个容器 */
-            background-position: 50% 0%; /* 水平居中，垂直位置在容器的25% */
         }
 
-        .btn-secondary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.7);
-            background-color: rgba(255, 255, 255, 0);
-            /* color: white; */
+        .btn-secondary:hover::before {
             background-image: url('./texture/lyx2.png');
-            background-size: cover; /* 图片覆盖整个容器 */
-            background-position: 50% 40%; /* 水平居中，垂直位置在容器的25% */
         }
 
-        .btn-tertiary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.7);
-            background-color: rgba(255, 255, 255, 0);
-            /* color: white; */
+        .btn-tertiary:hover::before {
             background-image: url('./texture/zjx2.png');
-            background-size: cover; /* 图片覆盖整个容器 */
-            background-position: 50% 50%; /* 水平居中，垂直位置在容器的25% */
         }
 
-        .btn-fourth:hover {
+        .btn-fourth:hover::before {
+            background-image: url('./texture/zly1.png');
+        }
+
+        button:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.7);
-            background-color: rgba(255, 255, 255, 0);
-            /* color: white; */
-            background-image: url('./texture/zly1.png');
-            background-size: cover; /* 图片覆盖整个容器 */
-            background-position: 50% 0%; /* 水平居中，垂直位置在容器的25% */
         }
-        
     </style>
 </head>
 

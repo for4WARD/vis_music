@@ -69,46 +69,88 @@
 
         button {
             margin: 20px;
-            padding: 20px 40px;
+            padding: 100px 70px;
             font-size: 1.2rem;
             border: none;
             border-radius: 50px;
             cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.3s;
+            transition: all 0.5s ease;
             position: relative;
         }
 
         .btn-primary {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
+            background-color: rgba(255, 255, 255, 0);
+            /* color: white; */
+            background-image: url('./texture/lyt1.png');
+            background-size: cover; /* 图片覆盖整个容器 */
+            background-position: 50% 15%; /* 水平居中，垂直位置在容器的25% */
         }
 
         .btn-secondary {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
+            background-color: rgba(255, 255, 255, 0);
+            /* color: white; */
+            background-image: url('./texture/lyx1.png');
+            background-size: cover; /* 图片覆盖整个容器 */
+            background-position: center; /* 居中显示 */
+            background-position: 50% 5%; /* 水平居中，垂直位置在容器的25% */
         }
 
         .btn-tertiary {
-            background-color: rgba(255, 255, 255, 0.3);
-            color: white;
+            background-color: rgba(255, 255, 255, 0);
+            /* color: white; */
+            background-image: url('./texture/zjx1.png');
+            background-size: cover; /* 图片覆盖整个容器 */
+            background-position: center; /* 居中显示 */
         }
 
         .btn-fourth {
-            background-color: rgba(255, 255, 255, 0.3);
-            color: white;
+            background-color: rgba(255, 255, 255, 0);
+            /* color: white; */
+            background-image: url('./texture/zly2.png');
+            background-size: cover; /* 图片覆盖整个容器 */
+            background-position: 50% 0%; /* 水平居中，垂直位置在容器的25% */
         }
 
-        button:hover {
+        .btn-primary:hover {
+            transform: scale(1.05);
+            /* box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.7); */
+            background-color: rgba(255, 255, 255, 0);
+            /* color: white; */
+            background-image: url('./texture/lyt2.png');
+            background-size: cover; /* 图片覆盖整个容器 */
+            background-position: 50% 0%; /* 水平居中，垂直位置在容器的25% */
+        }
+
+        .btn-secondary:hover {
             transform: scale(1.05);
             box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0);
+            /* color: white; */
+            background-image: url('./texture/lyx2.png');
+            background-size: cover; /* 图片覆盖整个容器 */
+            background-position: 50% 40%; /* 水平居中，垂直位置在容器的25% */
         }
 
-        /* 页面跳转时的淡出动画 */
-        .fade-out {
-            opacity: 0;
-            transform: scale(0.8);
-            transition: opacity 1s, transform 1s;
+        .btn-tertiary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0);
+            /* color: white; */
+            background-image: url('./texture/zjx2.png');
+            background-size: cover; /* 图片覆盖整个容器 */
+            background-position: 50% 50%; /* 水平居中，垂直位置在容器的25% */
         }
+
+        .btn-fourth:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0);
+            /* color: white; */
+            background-image: url('./texture/zly1.png');
+            background-size: cover; /* 图片覆盖整个容器 */
+            background-position: 50% 0%; /* 水平居中，垂直位置在容器的25% */
+        }
+        
     </style>
 </head>
 

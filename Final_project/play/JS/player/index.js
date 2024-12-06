@@ -21,8 +21,8 @@ $(function(){
     // 一些计算所需的变量
     var seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0
     var musicImgsData = ['player_assets/img/bg.jpg','player_assets/img/bg1.jpg','player_assets/img/bg2.jpg']    // 图片地址数组
-    var musicNameData = ['出山','盗将行','归去来兮'];                   // 歌曲名数组
-    var artistNameData = ['花粥/王胜娚','花粥/马雨阳','花粥']            // 创作歌手数组
+    var musicNameData = ['出山','Memories','归去来兮'];                   // 歌曲名数组
+    var artistNameData = ['花粥/王胜娚','Maroon 5','花粥']            // 创作歌手数组
     var musicUrls=['player_assets/mp3/music1.mp3','player_assets/mp3/music2.mp3','player_assets/mp3/music3.mp3'];// 歌曲mp3数组
     var currIndex = -1;              // 当前播放索引
     

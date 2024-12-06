@@ -148,6 +148,7 @@
     box-shadow: 0 0 0 10px #fff;
     border-radius: 50%;
     overflow: hidden;
+    background-size: contain;
 }
 /* 左侧封面图模块添加了active类名 */
 .music-imgs.active{

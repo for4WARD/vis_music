@@ -64,14 +64,17 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 20px; /* 增加按钮之间的间距 */
+            gap: 40px;
+            /* 增加按钮之间的间距 */
         }
 
         button {
             display: flex;
+            /* 使用 Flexbox */
             flex-direction: column;
+            /* 垂直排列内容 */
+            justify-content: flex-end;
             align-items: center;
-            justify-content: space-between;
             margin: 20px;
             padding: 20px;
             font-size: 1.2rem;
@@ -79,53 +82,60 @@
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.5s ease;
+            /* 过渡效果 */
             position: relative;
             height: 250px;
-            width: 200px;
+            width: 230px;
             background-color: rgba(255, 255, 255, 0);
-            color:aliceblue;
+            /* 背景颜色 */
+            color: aliceblue;
+            background-size: contain;
+            /* background-position: center; */
+            /* 背景图居中 */
         }
 
-        button::before {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 70%;
-            background-size: cover;
-            background-position: center;
-            border-radius: 50px 50px 0 0;
-        }
-
-        .btn-primary::before {
+        /* 默认背景图 */
+        .btn-primary {
             background-image: url('./texture/lyt1.png');
+            background-position: 50% 60%;
         }
 
-        .btn-secondary::before {
+        .btn-secondary {
             background-image: url('./texture/lyx1.png');
+            background-position: 50% 90%;
         }
 
-        .btn-tertiary::before {
+        .btn-tertiary {
             background-image: url('./texture/zjx1.png');
+            background-position: 50% 50%;
         }
 
-        .btn-fourth::before {
+        .btn-fourth {
             background-image: url('./texture/zly2.png');
+            background-position: 50% 90%;
         }
 
-        .btn-primary:hover::before {
+        /* hover 状态背景图 */
+        .btn-primary:hover {
+            background-size: contain;
             background-image: url('./texture/lyt2.png');
         }
 
-        .btn-secondary:hover::before {
+        .btn-secondary:hover {
+            background-size: contain;
             background-image: url('./texture/lyx2.png');
+            background-position: 50% 25%;
         }
 
-        .btn-tertiary:hover::before {
+        .btn-tertiary:hover {
+            background-size: contain;
             background-image: url('./texture/zjx2.png');
         }
 
-        .btn-fourth:hover::before {
+        .btn-fourth:hover {
+            background-size: contain;
             background-image: url('./texture/zly1.png');
+            background-position: 50% 100%;
         }
 
         button:hover {

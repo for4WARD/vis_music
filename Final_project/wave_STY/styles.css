@@ -7,7 +7,9 @@
 html {
   width: 100vw;
   height: 100vh;
-  background-color: #111111;
+  /* background-color: #111111; */
+  background-image: url('../bg/4.jpg');
+  background-size:cover;
   overflow: hidden;
   font-family: "Poppins", sans-serif;
 }
@@ -46,6 +48,7 @@ canvas {
   color: #cce7f8;
   text-shadow: 0 0 2px #ffffff, 0 0 4px #cce7f8; /* 微弱的发光效果 */
   text-align: center; /* 添加这一行实现文本居中 */
+  font-size: 35px;
   margin-top: 1%;
  }
 
@@ -144,26 +147,28 @@ canvas {
 }
 
 .startBtn {
-  transform: translate(-50%, -50%);
-  padding: 0.5rem 1.25rem;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 10px #bcbcbc, inset -4px -4px 10px #ffffff;
+  color: #4d4d4d;
   cursor: pointer;
-  font-size: 1.625rem;
-  font-weight: 700;
-  background-color: #cce7f8; /* 按钮的背景色 */
-  border: 2px solid #cce7f8;
-  border-radius: 2rem;
-  transition: all 0.3s ease-in-out;
+  font-size: 20px;
+  padding: 15px 40px;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid rgb(206, 206, 206);
+  /* transition: all 0.4s; */
   position: absolute;
-  top: 70%;
-  left: 50%;
-  color: #a332ff; 
+  top: 60%;
+  left: 46%;
 }
 
 .startBtn:hover {
-  background-color: #a332ff;
-  border: 2px solid #a332ff;
-  color: #cce7f8;
-  box-shadow: 0 0 5px #a332ff, 0 0 10px #a332ff; /* 添加发光效果 */
+  box-shadow: inset 0 0 0 4px #ef476f, 
+              inset 0 0 0 8px #ffd166, 
+              inset 0 0 0 12px #06d6a0,
+              inset 0 0 0 16px #118ab2;
+  background: #073b4c;
+  color: #fff;
 }
 
 #fileUpload {

@@ -12,9 +12,8 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: linear-gradient(135deg, rgb(0, 0, 0), rgb(139, 139, 139));
-            background-size: 400% 400%;
-            animation: gradientAnimation 10s ease infinite;
+            background-image: url('./bg/1.jpg');
+            background-size:cover;
             color: white;
             font-family: 'Arial', sans-serif;
         }
@@ -51,11 +50,11 @@
 
         @keyframes light {
             from {
-                text-shadow: 6px 6px 12px rgba(12, 171, 36, 0.5);
+                text-shadow: 6px 6px 12px rgba(240, 245, 240, 0.5);
             }
 
             to {
-                text-shadow: 6px 6px 12px rgba(255, 3, 24, 0.5);
+                text-shadow: 6px 6px 12px rgba(83, 82, 82, 0.5);
             }
         }
 
@@ -140,7 +139,7 @@
 
         button:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.7);
+            /* box-shadow: 0 8px 40px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.7); */
         }
     </style>
 </head>

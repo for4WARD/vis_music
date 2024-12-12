@@ -6,9 +6,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(135deg, rgb(2, 211, 211), rgb(251, 56, 199));
-    background-size: 400% 400%;
-    animation: gradientAnimation 10s ease infinite;
+    background-image: url('../bg/3.jpg');
+    background-size:cover;
     color: white;
     font-family: 'Arial', sans-serif;
 }
@@ -73,7 +72,7 @@ canvas:hover {
 }
 
 #Press {
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 .button {
@@ -94,7 +93,6 @@ canvas:hover {
         0px 3px 0px #a0a0a0,
         0px 4px 0px #909090,
         0px 5px 10px rgba(0, 0, 0, .9);
-
 }
 
 .button:hover {
@@ -130,14 +128,8 @@ main {
 #play-button {
     border: none;
     background-color: transparent;
-    /* color: white; */
-    /* size: 20px; */
-    /* 
-    height: 20px; */
-    /* height: 50px; */
     border-radius: 50%;
     user-select: none;
-    /* margin-top: 3%; */
 }
 
 #play-button:focus {
@@ -147,7 +139,6 @@ main {
 
 #progress {
     width: 95%;
-    /* flex: 1; */
 }
 
 #ui {
